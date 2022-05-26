@@ -15,3 +15,14 @@ public function functionName( MyClass $variable, String $variable2, Int $variabl
 } 
 
  -->
+
+ <?php
+
+ require_once __DIR__ . "/Models/Product.php";
+ require_once __DIR__ . "/Models/DogEating.php";
+ 
+
+ $mongeMediumAdult = new DogEating('Monge Medium Adult', 'Mangiare per cane adulto', 29.90, 26.91, 10);
+
+ var_dump($mongeMediumAdult);
+    
