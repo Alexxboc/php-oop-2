@@ -20,9 +20,9 @@ class Product {
     public function setDiscount($user )
     {
         if($user->signIn === true) {
-           return $this->discount = $this->price * 0.2;
+           $this->discount = $this->price * 0.2;
         } else {
-           return $this->discount = 0;
+             $this->discount = 0;
         }
         
     } 
