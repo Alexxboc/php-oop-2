@@ -20,9 +20,13 @@ public function functionName( MyClass $variable, String $variable2, Int $variabl
 
  require_once __DIR__ . "/Models/Product.php";
  require_once __DIR__ . "/Models/DogEating.php";
+ require_once __DIR__ . "/Models/DogBed.php";
+ require_once __DIR__ . "/Models/Frisbee.php";
  
 
  $mongeMediumAdult = new DogEating('Monge Medium Adult', 'Mangiare per cane adulto', 29.90, 26.91, 10);
+ $geoFrisbeeTornado = new Frisbee('Geo frisbee Tornado', 'Frisbee di plastica', 15, 12, 20);
+ $cucciaDomus = new DogBed('Cuccia Domus', 'Cuccia di legno', 59.90, 41.93, 30);
 
- var_dump($mongeMediumAdult);
+ var_dump($mongeMediumAdult, $geoFrisbeeTornado, $cucciaDomus);
     
