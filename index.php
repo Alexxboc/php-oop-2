@@ -48,6 +48,7 @@ $users = [
 
 var_dump($products, $users);
 foreach ($users as $user) {
+    var_dump($user->setDiscount(true));
     var_dump($user->getDiscount());
 }
 
