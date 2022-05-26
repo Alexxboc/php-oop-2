@@ -17,11 +17,16 @@ public function functionName( MyClass $variable, String $variable2, Int $variabl
  -->
 
 <?php
-
+/* Products */
 require_once __DIR__ . "/Models/Product.php";
 require_once __DIR__ . "/Models/DogEating.php";
 require_once __DIR__ . "/Models/DogBed.php";
 require_once __DIR__ . "/Models/Frisbee.php";
+/* Users */
+require_once __DIR__ . "/Models/User.php";
+require_once __DIR__ . "/Models/Alessandro.php";
+require_once __DIR__ . "/Models/Fabio.php";
+
 
 
 //  $mongeMediumAdult = new DogEating('Monge Medium Adult', 'Mangiare per cane adulto', 29.90, 26.91, 10);
@@ -34,9 +39,14 @@ $products = [
     new DogBed('Cuccia Domus', 'Cuccia di legno', 59.90, 41.93, 30, 'https://picsum.photos/id/237/400/300')
 ];
 
+$users = [
+    new Alessandro('Alessandro', 'Boccardi', 'boccardi.alessandro@gmail.com','credit card', true),
+    new Fabio('Fabio', 'Pacifici', 'boccardi.fabio@gmail.com', 'credit card', false),
+];
+
 //var_dump($mongeMediumAdult, $geoFrisbeeTornado, $cucciaDomus);
 
-//var_dump($products);
+var_dump($products, $users);
 
 ?>
 
@@ -63,24 +73,24 @@ $products = [
                         </div>
                         <!-- /.img -->
 
-                        <div class="card_body text-center">
-                            <h5 class="product_name">
-                            <?= $product->name; ?>
+                        <div class="card_body text-center p-3">
+                            <h5 class="product_name text-warning">
+                                <?= $product->name; ?>
                             </h5>
                             <!-- /.product_name -->
-                            <div class="price">
+                            <div class="price my-3">
                                 <span class="official_price me-2">
-                                <?= $product->price; ?>
+                                    € <?= $product->price; ?>
                                 </span>
                                 <!-- /.official_price -->
                                 <span class="discount_price text-danger">
-                                <?= $product->discountPrice; ?>
+                                    € <?= $product->discountPrice; ?>
                                 </span>
                                 <!-- /.discount_price -->
                             </div>
                             <!-- /.price -->
                             <p class="description">
-                            <?= $product->description; ?>
+                                <?= $product->description; ?>
                             </p>
                             <!-- /.description -->
                         </div>
