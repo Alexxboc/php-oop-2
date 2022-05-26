@@ -34,19 +34,22 @@ require_once __DIR__ . "/Models/Fabio.php";
 //  $cucciaDomus = new DogBed('Cuccia Domus', 'Cuccia di legno', 59.90, 41.93, 30);
 
 $products = [
-    new DogEating('Monge Medium Adult', 'Mangiare per cane adulto', 29.90, 26.91, 10, 'https://picsum.photos/id/237/400/300'),
-    new Frisbee('Geo frisbee Tornado', 'Frisbee di plastica', 15, 12, 20, 'https://picsum.photos/id/237/400/300'),
-    new DogBed('Cuccia Domus', 'Cuccia di legno', 59.90, 41.93, 30, 'https://picsum.photos/id/237/400/300')
+    new DogEating('Monge Medium Adult', 'Mangiare per cane adulto', 29.90, 'https://picsum.photos/id/237/400/300'),
+    new Frisbee('Geo frisbee Tornado', 'Frisbee di plastica', 15,  'https://picsum.photos/id/237/400/300'),
+    new DogBed('Cuccia Domus', 'Cuccia di legno', 59.90, 'https://picsum.photos/id/237/400/300')
 ];
 
 $users = [
-    new Alessandro('Alessandro', 'Boccardi', 'boccardi.alessandro@gmail.com','credit card', true),
+    new Alessandro('Alessandro', 'Boccardi', 'boccardi.alessandro@gmail.com', 'credit card', true),
     new Fabio('Fabio', 'Pacifici', 'boccardi.fabio@gmail.com', 'credit card', false),
 ];
 
 //var_dump($mongeMediumAdult, $geoFrisbeeTornado, $cucciaDomus);
 
 var_dump($products, $users);
+foreach ($users as $user) {
+    var_dump($user->getDiscount());
+}
 
 ?>
 
