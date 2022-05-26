@@ -1,33 +1,21 @@
 <?php
 
-class User {
+class User
+{
     public $username;
     public $userLastName;
     public $userEmail;
     public $userPayment;
     public $cardExipiration;
-    public $discount;
+    public $signIn;
 
-     function __construct(String $_username, String $_userLastName, String $_userEmail, String $_userPayment, Bool $_cardExipiration, Int $_discount = 0) {
+    function __construct(String $_username, String $_userLastName, String $_userEmail, String $_userPayment, Bool $_cardExipiration, Bool $_signIn)
+    {
         $this->username = $_username;
         $this->userLastName = $_userLastName;
         $this->userEmail = $_userEmail;
         $this->userPayment = $_userPayment;
         $this->cardExipiration = $_cardExipiration;
-        $this->discount = $_discount;
-
-    }
-
-  public function setDiscount($signIn)
-    {
-        if($signIn === true) {
-            $this->discount = 20;
-        }
-        
-    } 
-
-    public function getDiscount()
-    {
-        return 
+        $this->signIn = $_signIn;
     }
 }
