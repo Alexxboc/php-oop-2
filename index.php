@@ -26,6 +26,10 @@ require_once __DIR__ . "/Models/Frisbee.php";
 require_once __DIR__ . "/Models/User.php";
 require_once __DIR__ . "/Models/Alessandro.php";
 require_once __DIR__ . "/Models/Fabio.php";
+require_once __DIR__ . "/Models/CreditCard.php";
+require_once __DIR__ . "/Models/Payment.php";
+
+
 
 
 
@@ -47,11 +51,20 @@ $user_2 = new Fabio('Fabio', 'Pacifici', 'boccardi.fabio@gmail.com', 'credit car
 
 //var_dump($products, $users_1, $user_2);
 
+
+
 foreach($products as $product) {
     $product->setDiscount($user_1);
     var_dump($product);
     
 }
+
+$userCard = new CreditCard('123123123122', '113', '06', '22');
+
+$payment = new Payment($user_2, $userCard);
+$payment->order($userCard);
+
+
 
 ?>
 
