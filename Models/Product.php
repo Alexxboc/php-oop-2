@@ -1,6 +1,5 @@
 <?php
 
-require __DIR__ . '/../Traits/IdTrait.php';
 
 class Product {
 

@@ -2,8 +2,8 @@
 
 class Payment
 {
-  protected $user;
-  protected $card;
+  public $user;
+  public $card;
 
   public function __construct($user, $card)
   {
@@ -13,7 +13,7 @@ class Payment
 
   public function getFullName()
   {
-    return $this->user->name . ' ' . $this->user->lastName;
+    return $this->user->userName . ' ' . $this->user->userLastName;
   }
 
   public function order(CreditCard $card)
@@ -25,7 +25,7 @@ class Payment
     $name = $this->getFullName();
     if ($card->expirationYear > $current_year) {
 
-      echo " <h2 class='text-success'>$name Grazie per il tuo ordine!</h2>";
+      echo " <h2 class='text-success'> $name Grazie per il tuo ordine!</h2>";
     } else if (
       $card->expirationYear ==  $current_year &&
       $card->expirationMonth >= $current_month
@@ -33,7 +33,7 @@ class Payment
       echo "<h2 class='text-success'>$name Grazie per il tuo ordine!</h2>";
     } else {
 
-      echo "<h2 class='text-danger'>$name la tua carta non è più valida!</h2>";
+      echo "<h2 class='text-danger'> $name la tua carta non è più valida!</h2>";
     }
   }
 }

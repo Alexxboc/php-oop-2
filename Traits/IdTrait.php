@@ -1,10 +1,12 @@
 <?php
 
-trait IdNumber {
-    public $idNumber;
+trait IdNumber
+{
+
+    public $numberId;
 
     public function setIdNumber(Int $min, Int $max)
     {
-        return $this->idNumber = rand($min, $max);
+        return $this->numberId = rand($min, $max);
     }
 }
