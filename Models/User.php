@@ -1,7 +1,11 @@
 <?php
 
+require __DIR__ . '/../Traits/IdTrait.php';
+
 class User
 {
+    use IdNumber;
+
     public $username;
     public $userLastName;
     public $userEmail;

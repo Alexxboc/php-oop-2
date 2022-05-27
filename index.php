@@ -28,6 +28,8 @@ require_once __DIR__ . "/Models/Alessandro.php";
 require_once __DIR__ . "/Models/Fabio.php";
 require_once __DIR__ . "/Models/CreditCard.php";
 require_once __DIR__ . "/Models/Payment.php";
+/* Traits */
+//require __DIR__ . '/../Traits/IdTrait.php';
 
 
 
@@ -44,7 +46,7 @@ $products = [
 ];
 
 $user_1 = new Alessandro('Alessandro', 'Boccardi', 'boccardi.alessandro@gmail.com', 'credit card', true, true);
-    
+//$user_1->setIdNumber(1, 100000);
 $user_2 = new Fabio('Fabio', 'Pacifici', 'boccardi.fabio@gmail.com', 'credit card', false, false);
 
 

@@ -1,6 +1,11 @@
 <?php
 
+require __DIR__ . '/../Traits/IdTrait.php';
+
 class Product {
+
+    use IdNumber;
+
     public $name;
     public $description;
     public $price;
