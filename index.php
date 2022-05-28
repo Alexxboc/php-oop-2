@@ -58,17 +58,25 @@ var_dump($user_1);
 
 
 
-// foreach($products as $product) {
-//     $product->setDiscount($user_1);
-//     $product->setIdNumber(1, 10000);
-//     $product->setCategory();
-//     var_dump($product);
+foreach($products as $product) {
+    $product->setDiscount($user_1);
+
+    try {
+        echo $product->setIdNumber(1, 10000);
+        } catch (Exception $e) {
+        echo 'Eccezione: ' . $e->getMessage();
+        }
+
+    $product->setCategory();
+    var_dump($product);
+
+
     
-// }
+}
 
 $userCard = new CreditCard('123123123122', '113', '06', '22');
 
-$payment = new Payment($user_2, $userCard);
+$payment = new Payment($user_1, $userCard);
 $payment->order($userCard);
 
 
