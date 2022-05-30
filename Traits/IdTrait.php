@@ -5,7 +5,7 @@ trait IdNumber
 
     public $numberId;
 
-    public function setIdNumber(Int $min, Int $max)
+    public function setIdNumber( $min, $max)
     {   
         if(!is_int($min) && !is_int($max)) {
             throw new Exception('Is not a number');

@@ -62,9 +62,9 @@ foreach($products as $product) {
     $product->setDiscount($user_1);
 
     try {
-        echo $product->setIdNumber(1, 10000);
+        echo $product->setIdNumber('a', 'b');
         } catch (Exception $e) {
-        echo 'Eccezione: ' . $e->getMessage();
+        echo 'Eccezione' . $e->getMessage();
         }
 
     $product->setCategory();
